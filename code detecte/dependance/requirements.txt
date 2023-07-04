@@ -1,6 +1,5 @@
 cx-Freeze
 opencv-python
-ttkthemes
 numpy
 pandas
 pillow
