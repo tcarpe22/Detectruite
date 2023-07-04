@@ -1,6 +1,4 @@
 import os
-import sysconfig
-import subprocess
 import pyshortcuts
 from cx_Freeze import setup, Executable
 from pathlib import Path
@@ -13,8 +11,6 @@ script = f"{repertoire}/code detecte/Détéctruite.py"
 
 
 icon = f"{repertoire}/code detecte/image/truite.ico"
-
-bat_file = os.path.join(f"{repertoire}/code detecte/dependance/dépendance.bat")
 
 # Configuration de l'exécutable
 exe = Executable(
@@ -49,7 +45,3 @@ desktop_path = Path.home() / "Desktop"
 
 # Création du raccourci sur le bureau
 pyshortcuts.make_shortcut(executable_path, name="Détéctruite", folder=str(desktop_path), icon=icon)
-
-
-# Exécute le fichier batch
-subprocess.call(bat_file)
