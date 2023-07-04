@@ -87,7 +87,7 @@ background_button = ImageTk.PhotoImage(background_but)
 
 #Widget pour afficher l'image en background
 background_label = ttk.Label(frame, image=background_button)
-background_label.place(x=0, y=0, relwidth=1, relheight=1, anchor="nw", rely=-0.35)
+background_label.place(x=0, y=0, relwidth=1, relheight=1.5, anchor="nw", rely=-0.35)
 
 #Titre
 title_label = ttk.Label(frame, text="Détéctruite", font=("Arial", 16))
