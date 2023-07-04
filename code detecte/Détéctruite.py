@@ -557,7 +557,7 @@ df3 = pd.DataFrame(data3)
 bureau = os.path.join(os.path.expanduser("~"), "Desktop")
 
 #Mettre le fichier Excel sur le bureau
-chemin_fichier_excel = os.path.join(bureau, "donnees_poissons.xlsx")
+chemin_fichier_excel = os.path.join(bureau, "Donnees_brutes.xlsx")
 chemin_fichier_excel2 = os.path.join(bureau, "Vitesses_moyennes.xlsx")
 chemin_fichier_excel3 = os.path.join(bureau, "Vitesses_max.xlsx")
 
