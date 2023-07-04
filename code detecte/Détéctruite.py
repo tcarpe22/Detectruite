@@ -43,7 +43,7 @@ window2 = None
 windows = [window1]
 
 #Chargement de l'image pour le background (style)
-image = Image.open(f"{repertoire}/image/truite.jpg")
+image = Image.open(f"{repertoire}/image/truite.png")
 image = image.resize((1024, 1024), Image.ANTIALIAS)
 background_image = ImageTk.PhotoImage(image)
 
@@ -81,7 +81,7 @@ style.configure("TButton",
 frame = ttk.Frame(window1)
 
 #Chargement de l'image pour le background (style)
-background_but = Image.open(f"{repertoire}/image/background.jpg")
+background_but = Image.open(f"{repertoire}/image/R.jpg")
 background_but = background_but.resize((360, 192), Image.ANTIALIAS)
 background_button = ImageTk.PhotoImage(background_but)
 
