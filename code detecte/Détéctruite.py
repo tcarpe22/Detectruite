@@ -82,7 +82,7 @@ frame = ttk.Frame(window1)
 
 #Chargement de l'image pour le background (style)
 background_but = Image.open(f"{repertoire}/image/R.jpg")
-background_but = background_but.resize((360, 192), Image.ANTIALIAS)
+background_but = background_but.resize((360, 150), Image.ANTIALIAS)
 background_button = ImageTk.PhotoImage(background_but)
 
 #Widget pour afficher l'image en background
