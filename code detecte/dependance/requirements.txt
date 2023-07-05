@@ -6,3 +6,4 @@ pillow
 matplotlib
 plyer
 pyshortcuts
+--upgrade Pillow
