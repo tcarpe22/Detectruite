@@ -564,11 +564,17 @@ data2 = {
     'Moyenne Vitesse Bac Jaune (m/s)': avg_speeds_yellow
 }
 
+# Arrondir les valeurs à 10^-3
+v_max_blue = round(v_max_blue, 3)
+v_max_green = round(v_max_green, 3)
+v_max_yellow = round(v_max_yellow, 3)
+
 data3 = {
-    'Vitesse Max Bac Bleu': [v_max_blue], #Vitesse max
-    'Vitesse Max Bac Vert': [v_max_green],
-    'Vitesse Max Bac Jaune': [v_max_yellow]
+    'Vitesse Max Bac Bleu': v_max_blue,  # Vitesse max
+    'Vitesse Max Bac Vert': v_max_green,
+    'Vitesse Max Bac Jaune': v_max_yellow
 }
+
 
 #Création des dataframes
 df = pd.DataFrame(data)
