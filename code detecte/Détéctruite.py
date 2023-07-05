@@ -517,13 +517,24 @@ fish_speeds = [round(speed, 3) for speed in fish_speeds]
 fish_speeds2 = [round(speed, 3) for speed in fish_speeds2]
 fish_speeds3 = [round(speed, 3) for speed in fish_speeds3]
 
-#Calcul de la vitesse moyenne sur les 30 dernières secondes
-avg_speeds_blue = [sum(fish_speeds[max(0, i - 30):i]) / min(i, 30) for i in range(1, length + 1)]
-avg_speeds_green = [sum(fish_speeds2[max(0, i - 30):i]) / min(i, 30) for i in range(1, length + 1)]
-avg_speeds_yellow = [sum(fish_speeds3[max(0, i - 30):i]) / min(i, 30) for i in range(1, length + 1)]
+interval_duration = 30  # Durée de l'intervalle en secondes
+
+# Calcul des intervalles de temps
+interval_times = list(range(0, elapsed_time + 1, interval_duration))
+
+avg_speeds_blue = [sum(fish_speeds[max(0, i - interval_duration):i]) / min(i, interval_duration) if i != 0 else 0 for i in interval_times]
+avg_speeds_green = [sum(fish_speeds2[max(0, i - interval_duration):i]) / min(i, interval_duration) if i != 0 else 0 for i in interval_times]
+avg_speeds_yellow = [sum(fish_speeds3[max(0, i - interval_duration):i]) / min(i, interval_duration) if i != 0 else 0 for i in interval_times]
+
+
+#Arrondir les valeurs à 10^-3
+avg_speeds_blue = [round(speed, 3) for speed in avg_speeds_blue]
+avg_speeds_green = [round(speed, 3) for speed in avg_speeds_green]
+avg_speeds_yellow = [round(speed, 3) for speed in avg_speeds_yellow]
 
 #Liste vide avec la même longueur que times pour exportation
-empty = [''] * len(times)
+empty = [""] * len(times)
+empty2 = [""] * len(interval_times)
 
 #Dictionnaires des données
 data = {
@@ -534,12 +545,13 @@ data = {
     'Vitesse jaune (m/s)': fish_speeds3,  # Vitesse du bac jaune
 }
 
+# Créer un dictionnaire des données
 data2 = {
-    'Temps': times[0:], #Toutes les 30 secondes
-    '': empty,
-    'Moyenne Vitesse Bac Bleu (m/s)': avg_speeds_blue[0:],  #Vitesse moyenne des 30 dernières secondes
-    'Moyenne Vitesse Bac Vert (m/s)': avg_speeds_green[0:],
-    'Moyenne Vitesse Bac Jaune (m/s)': avg_speeds_yellow[0:]
+    'Temps': interval_times,  # Intervalle de temps (0, 30, 60, etc.)
+    '': empty2,
+    'Moyenne Vitesse Bac Bleu (m/s)': avg_speeds_blue,  # Vitesse moyenne des 30 dernières secondes
+    'Moyenne Vitesse Bac Vert (m/s)': avg_speeds_green,
+    'Moyenne Vitesse Bac Jaune (m/s)': avg_speeds_yellow
 }
 
 data3 = {
