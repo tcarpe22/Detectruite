@@ -570,9 +570,9 @@ v_max_green = round(v_max_green, 3)
 v_max_yellow = round(v_max_yellow, 3)
 
 data3 = {
-    'Vitesse Max Bac Bleu': v_max_blue,  # Vitesse max
-    'Vitesse Max Bac Vert': v_max_green,
-    'Vitesse Max Bac Jaune': v_max_yellow
+    'Vitesse Max Bac Bleu (m/s)': [v_max_blue],  # Vitesse max
+    'Vitesse Max Bac Vert (m/s)': [v_max_green],
+    'Vitesse Max Bac Jaune  (m/s)': [v_max_yellow]
 }
 
 
