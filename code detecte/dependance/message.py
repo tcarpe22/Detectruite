@@ -12,7 +12,7 @@ repertoire = os.path.normpath(repertoire)
 def show_notification():
     plyer.notification.notify(
         title='Installation réussie !',
-        message='vous êtes prêt à jouer avec des truite. Bon appétit 😉',
+        message='Vous êtes prêt à jouer avec des truites. Bon appétit 😉',
         app_icon=f'{repertoire}/event/truite.ico',  # Chemin vers une icône personnalisée si nécessaire
         timeout=10,  # Durée d'affichage de la notification en secondes
         ticker='Notification',  # Texte court qui apparaît brièvement sur certaines plateformes
