@@ -44,7 +44,7 @@ windows = [window1]
 
 #Chargement de l'image pour le background (style)
 image = Image.open(f"{repertoire}/image/truite.png")
-image = image.resize((1024, 1024), Image.ANTIALIAS)
+image = image.resize((1024, 1024))
 background_image = ImageTk.PhotoImage(image)
 
 #Widget pour afficher l'image en background
