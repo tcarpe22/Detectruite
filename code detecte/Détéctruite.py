@@ -111,6 +111,9 @@ window1.iconbitmap(f"{repertoire}/image/truite.ico")
 #Boucle principale de la fenêtre
 window1.mainloop()
 
+if path == "":
+    exit()
+
 print("Chemin de la vidéo sélectionnée :", path)
 
 #Capture de la vidéo
