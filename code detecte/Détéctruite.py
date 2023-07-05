@@ -539,6 +539,13 @@ avg_speeds_yellow = [round(speed, 3) for speed in avg_speeds_yellow]
 empty = [""] * len(times)
 empty2 = [""] * len(interval_times)
 
+# Retiré la valeurs de 0 dans le tableau exel "vitesse moyenne"
+interval_times = interval_times[1:]
+empty2 = empty2[1:]
+avg_speeds_blue = avg_speeds_blue[1:]
+avg_speeds_green = avg_speeds_green[1:]
+avg_speeds_yellow = avg_speeds_yellow[1:]
+
 #Dictionnaires des données
 data = {
     'Temps': times,  # Valeurs de temps
