@@ -6,12 +6,3 @@ pillow
 matplotlib
 plyer
 pyshortcuts
---upgrade Pillow
---upgrade cx-Freeze
---upgrade opencv-python
---upgrade numpy
---upgrade pandas
---upgrade pillow
---upgrade matplotlib
---upgrade plyer
---upgrade pyshortcuts
